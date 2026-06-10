@@ -7,7 +7,7 @@ plugins {
 
 android {
   namespace = "com.example"
-  compileSdk = 35
+  compileSdk = 34
 
   defaultConfig {
     applicationId = "com.aistudio.weatherhomera.vbcxyz"
