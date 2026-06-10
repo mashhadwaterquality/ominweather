@@ -1,0 +1,8 @@
+{
+  "name": "هواشناسی",
+  "description": "اپلیکیشن هواشناسی پیشرفته با امکان دریافت، مقایسه و جمع‌بندی داده‌های آب و هوایی از منابع مختلف به همراه پیش‌بینی چند روزه و مکان‌یابی خودکار",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
