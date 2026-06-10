@@ -1,0 +1,22 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Sun Disk -->
+    <path
+        android:fillColor="#FFD54F"
+        android:pathData="M50,42 A11,11 0,1 1,72,42 A11,11 0,1 1,50,42 Z" />
+    
+    <!-- Sun Rays -->
+    <path
+        android:strokeColor="#FFB74D"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:pathData="M61,24 L61,20 M61,60 L61,64 M79,42 L83,42 M43,42 L39,42 M74,29 L77,26 M48,55 L45,58 M74,55 L77,58 M48,29 L45,26" />
+        
+    <!-- Cloud Body -->
+    <path
+        android:fillColor="#ECEFF1"
+        android:pathData="M40,64 C35,64 31,60 31,55 C31,51.2 33.5,48 37.2,47 C39.5,41 45,37 51,37 C57.5,37 63,42 64.5,48.5 C68.2,49 71,52 71,55.8 C71,60.3 67.2,64 62.5,64 Z" />
+</vector>
