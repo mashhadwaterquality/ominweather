@@ -10,13 +10,11 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
-import retrofit2.http.Url
 import java.util.concurrent.TimeUnit
 
 interface WeatherApiService {
-    @GET
+    @GET("v1/forecast")
     suspend fun getWeatherData(
-        @Url url: String = "https://api.open-meteo.com/v1/forecast",
         @Query("latitude") latitude: Double,
         @Query("longitude") longitude: Double,
         @Query("current") current: String = "temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,weather_code,wind_speed_10m",
@@ -24,9 +22,8 @@ interface WeatherApiService {
         @Query("timezone") timezone: String = "auto"
     ): OpenMeteoResponse
 
-    @GET
+    @GET("https://geocoding-api.open-meteo.com/v1/search")
     suspend fun searchCities(
-        @Url url: String = "https://geocoding-api.open-meteo.com/v1/search",
         @Query("name") name: String,
         @Query("count") count: Int = 10,
         @Query("language") language: String = "en",
