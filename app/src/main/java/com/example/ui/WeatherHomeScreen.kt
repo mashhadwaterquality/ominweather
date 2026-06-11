@@ -335,6 +335,8 @@ fun CityChipsRow(
                     selectedContainerColor = Color.White.copy(alpha = 0.9f)
                 ),
                 border = InputChipDefaults.inputChipBorder(
+                    enabled = true,
+                    selected = isSelected,
                     selectedBorderColor = Color.White,
                     borderColor = Color.White.copy(alpha = 0.2f),
                     borderWidth = 1.dp,
@@ -467,7 +469,7 @@ fun LocationCard(
             // Massive Visual Weather Consensus Icon and Temperature
             Row(
                 verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.center,
+                horizontalArrangement = Arrangement.Center,
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Text(
@@ -526,10 +528,11 @@ fun LocationCard(
 
 @Composable
 fun MetricColumn(
-    imageVector: androidx.compose.ui.graphics.vector.ImageVector,
+    icon: androidx.compose.ui.graphics.vector.ImageVector,
     label: String,
     value: String,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    tint: Color = Color(0xFF64B5F6)
 ) {
     Column(
         modifier = modifier,
@@ -537,44 +540,14 @@ fun MetricColumn(
         verticalArrangement = Arrangement.spacedBy(4.dp)
     ) {
         Icon(
-            imageVector = imageVector,
+            imageVector = icon,
             contentDescription = label,
-            tint = Color(0xFF64B5F6),
+            tint = tint,
             modifier = Modifier.size(18.dp)
         )
         Text(
             text = value,
             fontSize = 14.sp,
-            fontWeight = FontWeight.Bold,
-            color = Color.White
-        )
-        Text(
-            text = label,
-            fontSize = 10.sp,
-            color = Color.White.copy(alpha = 0.6f)
-        )
-    }
-}
-
-@Composable
-fun MetricColumn(
-    icon: androidx.compose.ui.graphics.vector.ImageVector,
-    label: String,
-    value: String
-) {
-    Column(
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Icon(
-            imageVector = icon,
-            contentDescription = label,
-            tint = Color(0xFFFFB74D),
-            modifier = Modifier.size(18.dp)
-        )
-        Spacer(modifier = Modifier.height(4.dp))
-        Text(
-            text = value,
-            fontSize = 13.sp,
             fontWeight = FontWeight.Bold,
             color = Color.White
         )
@@ -997,7 +970,7 @@ fun GpsOrbitalHUD(
                         strokeWidth = 3.dp
                     )
                     Icon(
-                        imageVector = Icons.Default.SettingsInputSatellite,
+                        imageVector = Icons.Default.Satellite,
                         contentDescription = "اتصال ماهواره",
                         tint = Color.White,
                         modifier = Modifier.size(36.dp)
